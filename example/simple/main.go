@@ -18,10 +18,11 @@ func (e *SimpleElem) SetRatio(r int)  { e.ratio = r }
 
 func main() {
 	group := grouping.GroupDefinition{
-		// case: A+B=100
+		// case: A+B+C=100
 		Elems: []grouping.Elementer{
-			&SimpleElem{name: "group-A", ratio: 20},
-			&SimpleElem{name: "group-B", ratio: 80},
+			&SimpleElem{name: "group-A", ratio: 10},
+			&SimpleElem{name: "group-B", ratio: 20},
+			&SimpleElem{name: "group-C", ratio: 70},
 		},
 	}
 
@@ -47,5 +48,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("elem2: %v\n", elem2.GetName()) // group-B
+	fmt.Printf("elem2: %v\n", elem2.GetName()) // group-C
 }
