@@ -9,10 +9,19 @@
 ## Overview
 
 There are several elements to conduct the AB testing.
-* Grouping for target
-* Logging of result
+1. Grouping for target (extract target)
+1. Logging of result
+1. Separate out
+1. Verification
+1. Return to 1...
 
-This package provides simple way of extract target(e.g. user) based on unique id in server-side.  
+This package provides simple way of `1. Grouping for target (extract target)` (e.g. user) based on unique id in server-side.  
+
+### Non Goal
+* Feature flag management
+* Branch processing for groups
+
+<br/>
 
 ## Usage
 
@@ -124,6 +133,7 @@ see [example](./example/hash_func/main.go)
 	}
 ```
 
+<br/>
 
 ## LICENSE
 [MIT](./LICENSE)
