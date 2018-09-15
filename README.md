@@ -65,9 +65,32 @@ func main() {
 
 ### Advanced usage
 
+#### Default specification
+
+see [example](./example/default_elem/main.go)
+
+```
+	group := grouping.GroupDefinition{
+		// this means 20% of all
+		Elems: []grouping.Elementer{
+			&SimpleElem{name: "group-A", ratio: 20},
+		},
+		// not match
+		DefaultElem: &SimpleElem{name: "group-default"},
+	}
+
+	g, err := grouping.New(group)
+	if err != nil {
+		panic(err)
+	}
+```
+
+
+#### Customize hash function
+
 You can customize function for generate hash.
 
-see [example](./example/advanced/main.go)
+see [example](./example/hash_func/main.go)
 
 ```
 	group := grouping.GroupDefinition{
