@@ -2,6 +2,16 @@
 `grouping` is simple id grouping package in golang. Useful for AB testing.
 
 ![](https://img.shields.io/badge/golang-1.11.0-blue.svg?style=flat-square)
+[![Go Report Card](https://goreportcard.com/badge/github.com/takecy/grouping)](https://goreportcard.com/report/github.com/takecy/grouping)
+[![Build Status](https://travis-ci.org/takecy/grouping.svg?branch=master)](https://travis-ci.org/takecy/grouping)
+
+## Overview
+
+There are several elements to conduct the AB testing.
+* Grouping for target
+* Logging of result
+
+This package provides simple way of extract target(e.g. user) based on unique id in server-side.  
 
 ## Usage
 
