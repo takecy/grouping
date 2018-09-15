@@ -10,8 +10,8 @@
 
 There are several elements to conduct the AB testing.
 1. Grouping for target (extract target)
-1. Logging of result
 1. Separate out
+1. Logging of result
 1. Verification
 1. Return to 1...
 
@@ -88,6 +88,9 @@ func main() {
 ### Advanced usage
 
 #### Default specification
+
+You can define groups with a total ratio less than 100.  
+In this case, You can specify `default` for cases not matches any group.  
 
 see [example](./example/default_elem/main.go)
 
