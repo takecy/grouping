@@ -1,15 +1,3 @@
-# grouping
-`grouping` is simple id grouping package in golang. Useful for AB testing.
-
-![](https://img.shields.io/badge/golang-1.11.0-blue.svg?style=flat-square)
-
-## Usage
-
-### Basic usage
-
-see [example](./example/simple/main.go)
-
-```
 package main
 
 import (
@@ -61,33 +49,3 @@ func main() {
 	}
 	fmt.Printf("elem2: %v\n", elem2.GetName()) // group-B
 }
-```
-
-### Advanced usage
-
-You can customize function for generate hash.
-
-see [example](./example/advanced/main.go)
-
-```
-	group := grouping.GroupDefinition{
-		// case: A+B=100
-		Elems: []grouping.Elementer{
-			&SimpleElem{name: "group-A", ratio: 30},
-			&SimpleElem{name: "group-B", ratio: 70},
-		},
-	}
-	// replace hash function
-	hashFunc := func(seed string) uint32 {
-		return uint32(len(seed))
-	}
-
-	g, err := grouping.NewWithHashFunc(group, hashFunc)
-	if err != nil {
-		panic(err)
-	}
-```
-
-
-## LICENSE
-[MIT](./LICENSE)
