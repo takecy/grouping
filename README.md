@@ -9,13 +9,19 @@
 ## Overview
 
 There are several elements to conduct the AB testing.
-1. Grouping for target (extract target)
+
+### Prepare
+1. Define AB testing (Name, Rate etc...)
+1. Grouping for IDs (e.g. Users)
+
+### Per Request
+1. Decide group of requested id
 1. Separate out
 1. Logging of result
 1. Verification
 1. Return to 1...
 
-This package provides simple way of `1. Grouping for target (extract target)` (e.g. user) based on unique id in server-side.  
+This package provides simple way of `Prepare` and `1. Decide group of id` (e.g. user) based on unique id in server-side.  
 
 ### Non Goal
 * Feature flag management
